@@ -1,0 +1,16 @@
+.bs-dark .navbar-img {padding:5px 6px !important;}
+.bs-dark .navbar-img img {width:40px;}
+.bs-dark .dropdown-menu {
+  min-width: 200px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  background-color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(0, 0, 0, .15);
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+.comment {
+  margin: 20px 0px 20px 20px;
+}

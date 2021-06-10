@@ -1,0 +1,154 @@
+html {
+    box-sizing: border-box;
+}
+
+
+
+body,
+html {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #2e2e2e, #2b2b2b, #292929, #262626, #242424, #212121, #1f1f1f, #1c1c1c, #181818, #151515, #101010, #0b0b0b);
+    font-family: "Varela Round", sans-serif;
+}
+
+
+.A {
+    position: fixed;
+
+    margin-top: 15%;
+    margin-left: 46%
+}
+
+.svg1 {
+    position: fixed;
+    margin-top: 15%;
+    left: 46%;
+
+    transform: rotate(45deg);
+
+}
+
+h5,
+h6,
+.nw {
+    top: 50%;
+    position: fixed;
+    left: 40%;
+    color: goldenrod;
+}
+
+#copy {
+    top: 45%;
+    padding-bottom: 4%;
+    color: goldenrod;
+    position: fixed;
+    left: 47%;
+}
+
+h5 {
+    left: 42.5%;
+}
+
+h6 {
+    padding-top: 3%;
+    left: 47%;
+}
+
+.nw {
+    top: 65%;
+    left: 47%;
+}
+
+#social {
+    top: 80%;
+    width: 40vh;
+    height: 10px;
+    color: whitesmoke;
+    bottom: 10%;
+    position: absolute;
+    left: 55%;
+    display: -ms-flexbox;
+    transform: translate(-50%, -50%);
+
+}
+
+.fa {
+    padding: 15px;
+    font-size: 15px;
+    width: 10px;
+    text-align: center;
+    text-decoration: none;
+
+    border-radius: 50%;
+
+}
+
+.fa:hover {
+    opacity: 0.7;
+    color: gold;
+}
+
+.fa-facebook {
+
+    color: white;
+}
+
+.fa-instagram {
+
+    color: white;
+}
+
+.fa-dribbble {
+
+    color: white;
+}
+
+.fa-pinterest {
+
+    color: white;
+}
+
+.fa-linkedin {
+    color: white;
+
+}
+
+.fa-codepen {
+    color: white;
+}
+
+@media screen and (max-width: 750px) {
+
+    .A,
+    .svg1 {
+        top: 20%;
+        left: 40%;
+
+    }
+
+    .A {
+        left: -6%;
+    }
+
+    h5 {
+        left: 25%;
+
+    }
+
+    h6 {
+        top: 60%;
+        left: 45%;
+    }
+
+    .nw {
+        left: 45%;
+    }
+
+    #social {
+        position: absolute;
+        left: 75%;
+        right: 30%;
+    }
+}

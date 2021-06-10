@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ANUPRAVA PORTFOLIO</title>
+    {% load static %}
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'assests/Capture.JPG' %}">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap&subset=cyrillic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Parisienne&display=swap" rel="stylesheet">
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+
+    <script src="{% static 'javascripts/animation.js' %}"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#viewMore").click(function () {
+                $("#info").animate({
+                    top: "500px"
+                });
+                $("#aboutMe").animate({
+                    top: "0px"
+                });
+                $(".image").animate({
+                    left: "500px"
+                });
+            });
+            $("#close").click(function () {
+                $("#info").animate({
+                    top: "280px"
+                });
+                $("#aboutMe").animate({
+                    top: "-460px"
+                });
+                $(".image").animate({
+                    left: "0px"
+                });
+            });
+        });
+    </script>
+
+
+    <!-- accordion script-->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".card-header").click(function () {
+                $(".card-body").slideUp();
+                $(".card").removeClass("activate");
+                $(this).next(".card-body").slideDown();
+                $(this).parent(".card").addClass("activate");
+            })
+        })
+    </script>
+
+    <!-- menu script-->
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.menu-toggle').click(function () {
+                $('.menu-toggle').toggleClass('active');
+                $('nav').toggleClass('active');
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+    <header>
+
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div>
+                <svg height="100" width="50">
+                    <circle cx="20" cy="20" r="18" stroke="black" stroke-width="1" fill="transparent" />
+                    Sorry, your browser does not support inline SVG.
+                </svg>
+            </div>
+        </div>
+
+        <nav>
+            <ul class="menu">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/about.html">ABOUT</a></li>
+                <li><a href="/skills.html">SKILLS</a></li>
+                <!--<li><a href="gallery.htm">GALLERY</a></li>-->
+                <!-- <li><a href="source_code.htm">SOURCE_CODE</a></li> -->
+                <li><a href="/blog.html">BLOG</a></li>
+                <li><a href="contact.htm">CONTACT</a></li>
+                <!-- https://anupravabiswas.blogspot.com/ -->
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hlfshape">
+        <div class="blue_bg first">
+        </div>
+        <div class="blue_bg second">
+        </div>
+        <div class="blue_bg third">
+        </div>
+        <div class="welcome">Welcome to my Portfolio</div>
+
+        <svg class="A" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1.361in"
+            height="0.75in">
+            <image x="0px" y="0px" width="98px" height="54px"
+                xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGIAAAA2BAMAAADOlFHcAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAMFBMVEUAAAD////l5eHl5eHl5eHl5eHl5eHl5eHl5eHl5eHl5eHl5eHl5eHl5eHl5eH///8WYyZwAAAADnRSTlMAACBAMPBwYFCg0BDAsPsy2d0AAAABYktHRAH/Ai3eAAAAB3RJTUUH4wgVFDESJXhStgAAAY9JREFUSMft1bFOAzEMBuAIkCpUFr8BEi+AOMQAC6jiDRiYWNgRG1s39j5BF0akqoiNiSfgEdgAXVXyDATnLs7ZPl8mJjJU517+fmrsa50Ta6OitSvuggy4c0/roiSxdZUlPk4LEjmhIGATCgIDhERggJAIDBECAZX4bLpxoyCgErdNNVIQ0IivVE8lAhahImASGgImoSFgEwqCiXa874nYDOU+IZc0/CC6Fol5uKoJyboJjg8GEtt4OSOERgb6iR4EDEJHwCB0BCxCRc4souebTOJJH4fiocJOjVNZVUvsbCrDOmxbuRPee6XO9pfw14lsBkfdGZ72JLp7WF5PdDYxghKTeGCY8Nd4gHjnDl+xPvJtAje/eb9mAzxLH07dj08Vbm4See/rlKDuxye3k9AQTnQTGsIJlpCIIFhCIoLgCY5IgifcHv3HnoTymcoDpyeG139iVZxYNIlsvO3129OYqAsT85QoRHBs1u7dFyM4md/uxZcicTIf3XhRiiCxenLFSENA/CmP422vOPxL+AGDTkTo9Pcb9AAAAABJRU5ErkJggg==" />
+        </svg>
+
+        <div class="accord">
+            <div class="card activate">
+                <div class="card-header">
+                    <h3>Coding Ground</h3>
+                    <span></span>
+                </div>
+                <div class="card-body">
+                    <p>Coding tutorials and snippets and alogorithms</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Technical Articles</h3>
+                    <span></span>
+                </div>
+                <div class="card-body">
+                    <p>Latest news and topics for better understanding Of ML and Data science</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Kaggle competition code</h3>
+                    <span></span>
+                </div>
+                <div class="card-body">
+                    <p>In depth comprehensive explainations about the code</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Explainatory notes on DS and ML</h3>
+                    <span></span>
+                </div>
+                <div class="card-body">
+                    <p>mathematical intuitions about the algorithms used in DS and ML</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="about">About</div>
+
+    <svg id="svgall" class="svg1" width="100" height="100">
+        <rect width="100" height="100" style="fill:rgba(255, 255, 255, 0);stroke-width:20;stroke:rgb(0,0,0);" />
+        Sorry, your browser does not support inline SVG.
+    </svg>
+    <svg id="svgall" class="svg2" width="45" hight="45">
+        <circle r="25" cx="45" cy="25" />
+    </svg>
+    <svg id="svgall" class="svg3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="50" height="60">
+        <image x="0px" y="0px" width="50px" height="60px"
+            xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPcAAADnCAQAAABoUwhDAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQfjCBURKQK8HxhgAAAX4UlEQVR42u2dd3wVZfaHn+QmgYQISWApAQQVWZqKUl0CJNIDohBAmoKA6Kq4uvxsuGJdZMFdC6iLioQaQQUxSO8kNJUqoCy9iaD0kgLJ748kSJKbm3vvzDkzN8nDByPJzHve9/1m5s6857zn+AXOpBO/cJgd/MAGLpJBOmmkkEoJvo4/Dhw4CMj+6u8X2Jx1uQ5J4TgH2Mla9nCVdC5xntMl4tsYf4Ku/QnM/hpGGOGEE0YEYYQTQTgRBPkFRrHGRVNXOc5edrCF06RxgTOc5ChXrR5hCUAEHQmjHOUII4xylCWMcoRRpsAzUgIKadJBVarSKvtfVznOIXaxjfesHmuxpyIf0d3DczILkzs3WeLfDdzKk1aPt1gTSTztPD/N30tzTxDv4qZRgiw3M8sbsb2XGwYwm7JWj7tY0oCvaOHdqd7LDe1ZRHmrx17saMQcGnp7shG5oTkLqGX1+IsVUcwxMuPG5IYmzKWx1XNQbIjlC6obacCo3FCPr4myeh6KBb2YRmVjTRiXG6ryFbFWz0WRZxCfEW60ETPkhopMZoDV81GkeYZxZrz4miM3VGA8T1k6IUWZVxhFiBkNebaq5opQxlKasWRaNilFE3/e4u9m6WTW1Q0QxGjeoLQlk1JUCeY9njPvojRTbvDjJd4lVH1SiirhfGiub8JcuQEeZQJhWvNRpKnERAaa26T5ckNfJhGpMR9FmmpMpZvZjUrIDfczk5rS81GkqUWCdz4v18jIDVHMK1lN95rbmCWzUiklN9Rngfeem2JNI77kTpmm5eSGWiRyj2D7RZMo5lBbqnFJuaEa39BJ1EJRI5avjPm8XBIkKzeUYS49hW0UHXoyg4qC7R+RlhsCmVGymu4WDzOZcoLtH2SwvNwQwHu8qmDHt/kbHxIs2P4++rDMX/jTO4dX+JeKHV9lJP8S9Tb8TC/WgcMRSE9uUBhQCyJZXLL/xAl+jOV5ggQtbKE3WwH82UdX/qcyrKHMKvGX5aMU48xzcDplIz3ZkfW/foEANzOPuiqDW8IDnFax5BvcwDjhOKBkHuBozj+yPrn30Z4fVIbXjtklq+nXqEC8sNjL6PGH2OBwZH09xzzqcavCEGvSmrWcULBkd6oSz72iFr5hQO6ZzpEbzjOfmjRQGGYV2rLx+t+5YkktptBG1MLnDOFU7m/9ITeksIBIFbdGedqxnf0KluzK7UyjuaiFSTzBubzfvF5uSGcJZYS7kUUYHTic87xY7GhMAreJWviQ4VzI/+3cckM6K0hV8WOF0pETbFawZDdaMZObRS2M5UUuOftBXrnhKkmcJQZH4a0aJIhYfmNzMQtV7sw00dCuK7zJSNKd/9DhVNX1nKYlpcSH7k9n0thQjNbaehBPBcH2U3md1wu+gBwFXMTfsY9WKvkZ7qEcK4qJ4AOZKBqWfYmXGOPqAEeB9+wdbKetSsx4MyqzrKDbTxHib4wXXRm/yHDGuz7E4eIjei8biVGJGb+LW1jBZQVL1vEyo0RXxi8ylPjCDnK4fCI7RBJ3U0lhMhrQlAVcVLBkDWMYIfrwe4ZBzCr8sCwXiStuZhaNVKZkM104pmJJlyDe4THRuIKTDGS+OwcWLjeUZ57K0gv8SC92qVjSI4QJ9MNP0MIx+rPCvUPd+Z37nU7u/e4YpgHf8hcVS1qEM53+omIfoLu7Yhf22Z1DCnOpxh3ikwPhdGcDBxQsaRDJZGGf1y768p37h7snN6TzNVVUciwF04Md/KxgSZpaTKGtqIXN9GOLJye4KzfAPMpyt2j3swiiC6eUwi3kkPd5raefp086nsgNS7hAe9EhZFGK9qSRrGBJiibiPq9V9Gefpyd5Jjes5ShdRYeR3S/uwY9VCpYkaE0Ct4haWMiD3gSIeCo3bGIPsaLrQ1n405IKLPZBf1lnplJV1MJsBnLSmxM9lxu28yPtzEn85BJ/mlGLhT62mt6LeOHEwAk8whnvTvVGbviZDXRQ2YxwG3VY6kOr6QOEfV4wmSHOQxfcwTu54SBJxBAhOrAs6nEbyZxVsGScJ/lI1OcFH/JXI3c7b+WGo6yhKVVEB5fFrTRnLb8pWDLGS4wV3nE3huFkGGnAe7nhOMu4XWWTQDWiSeZXBUve8y9eFl0shVd52eiDqxG54RSLaaCScqci7djEIQVL3hDIOJ4WtvECo4y/pRiTGy4wn9oq+8si6MxP7Faw5CkhfMpgUQtXeJp3zXglNSo3XCaRStwpfCMDCKUbP7NT3I5nhDGVXqIW0niUj81ZfzAuN6STSDhNFQQPpCd72S5ux30imUIXUQvneZQpZjVmhtwACwmhuUImCD+6c4714nbc42amCu/z+p1HSTCvObPkhqWk0FJhcRU6UIplCnYKowEzhH1eRxnE12Y2aJ7csJbDdFHYfQJRhLHU4tX0JszgdlELBxjAEnObNFNu2MpO7sWN8DfDNOdGllq4mh7NNOHd8PvpS5LZjZorN+xiC21UNiM0pBFfk6ZgKT9dmCyY2xBgFw/wvfnNuhOJ6inN+YJqopORQxLdLFhc7ckE4yWeXLKZ/jIvnBJyQ10WUEN0QnLYSD/2qFjKwo8H+a9oujvYSB/P41TcQ+bVaRdtPQuZ85qmJEolg3aCP0/ymbDYSXSTElsu4/Ee7lN6WarDt0qbHvx5kfeF3zwW0ktyJ43Zj2p/cJZ51JfLzH0dN9CVH8Vv6Q7e5BVhG7MZLOv3k5MbLjOfm1RyOZWhI79mpYEUohT/YbjwKKbzV36XNSEpN6SymLI0lR0CACG056wn+yk8IphPGCI8gkkMk4/ZkZUbUllOJq2lhwEE0YZU1gq0HMY0YZ8XjOfvzjIlmY203HCF1aTTSsF9EkAMZVhlLLwnH1WYRmfRfl9lLC+QKmojG3m5IZPVXCBKOGgPwJ8oKrHCxMXVm5gunHYsnTd52eRf0QLRkBtgPYeJFn5jzaIR1VhFiilt1WUWzUR7m8qrvKkwK9loyQ3b+FllMwLcQW2SOG+4ncZ8LrzP6zIv8rbCjFxDT274ia1EU1bBUl2asMLbnRbZRDNFeNXgMsP4SGE2rkNTbtjLOlqKppHLoQb3sCxvvl8P6Mpnwqv+FxnMVIWZyIWMi8QVtzCX+iqWdtPPSydibz4Q3iFziiHMUZmFXOjLDZHMU3JrHONBlnt81kA+EH7GOMlDLFSZgTzolJXKzTFiWaRiKZJv6ODRGQ6e4hNhsY/R0xqxtT+7c7jAXGpTT8FSEL3Y5XZKiwBeEN/ntY/e5gcluYs1ckMaX3Cr8GtO9gjpzmk2unFkEK+K+7x20tetvkhNhkVyA3xNuPAiRhb+xJLB6kKOCmGsuM/rB/qL+u0KxUq5M1lCqnBYfg4xlHYZbhHKRzwi3Idk+lmdQMxKuSGTNZxSqvAdRVUWFrA2HcZkHhC2v4K+HFQZqQuslRtgI7/QUWUzQiNu5ysngldhhrDPC+bTn+MKYywE6+WGH9hFJ4VSGFCHZiTmcTXWJIEYYbtzGCgdp+IedpAbdvIdnVRKYdxCc1Zdt5pehy/Fo21mMDh/RS9rsIfcsI+NRKtURqhJDKuzs5I1YpZ4LN1nDDHJHWsCdpEbDrKWZiqVESrTkWR+oTVTxSNlxzGMKwpjchP7yA3HWEFjle1GEbQjhH9yk7Cd0bxgJ7GtcZG4ogZTaGV1J0xiJKPsVjDLTlc3wFkW8Gf+bHU3DJPJC4yxm9j2kxsukqhUGUGOdP7G+1rhhp5gP7khjblUVcnlJMNFnjArU5LZ2FFugEQiaGyJN94oZ/ireZmSzMaucsNCrqpsRjCXEwx1p3ybVdhXbljDSTr71C39CINItLoTrrCz3PA9++mkkrzLDA7ykC0SgLnA3nLDVnbQXmX3iVH28oDIhkRTsdsyizOimKMSm26EXfRmm9WdKBxfeBRKop3NS8FuJs4XxPYNuWELHW2V+DY3G4jzlUK1dv/szuEEC2nMjVZ3wwmr6W3btPr58I2rG2A/3b3YESLNt/TmiNWdcB9fuboBLjKf2tSxuhvX8QVDbV4hJQ++JDdcYjHhNLK6G9lM43EDe0wtwbfkhhSWEaxSZ7gwPmWYXSLQ3MfX5IYrrCCAFpYurmYynmd8qHbhNXxPbshgGSlEqeRNd8YVxvKcvYKS3MUX5QZI5ldiVGLT85LOm4y0pze7cHxVbtjEAdpQWtlqGiMZZfXQvcd35YYf+ZlWKnWGc0jh/3jH6mEbwZflhp/YSBuVzQiQFbowyeohG8N3VtWck0SsWrWCG3zvxSsvvn11A5zkJ/qo/NoGci97bFeU0iN8X+5GTFDZagRQmm4cZLuvPpf7vtytSRCu55UbB/dzgQ2+Krhvy92JaVRVtulHexys9E3BfVnuHsRbFNTUilBW2m9LUOH4rtyD+EDtFSw/f6E6yyyqUWgAXwhNdMYzvKGS7cEVi+ihUVDCTHzzvfsfvGW52NCBb/mT1Z3wDN+7mQfwT16yzBuWmxq0ZrU9kuy4h6/dzMswmiet7kQu/kecjaNk8+BbcofxHg9Z3Yl8HKerWAUzk/Glm3kFPqaP1Z1wQqhKUUpT8B25qzOJrlZ3ogBC6cxxa5PbuoevyF2LKUrJcr0jmA787mUpDEV8Q+66zFRJhW2EQNoJFaU0EV+Q+y6+VCpWY4wAoilj7x3e9pe7FQncYnUn3MRBCyJZat8oVbvL3ZEZ6j4vI/jRiOqstE8W1NzYW+44pgnX85KgIbVJNqEopQB2lnsw/1WNMzWPujTKlUbbNthX7qf5tw3cIN5Skxasst9qul3lfok31bcMmEskbdhotyQjdpTbj7d4UaG4uzR/ojObOWB1N67Hfi6SIN7hMXE/fJrSr9MF4lisYskt7BbecAOf8Lh4r5IYwmaV8YQylx4qltzCXjfzCnxMX3Er63iQVSwjiioKYwqgG6fs4iC1k9zV+Yz7xK0spy+HgFN8y91UVxiXg1hSSFawVHhXbCO3js8rkUHXnpbPM5+6SpsS2uJgpYoll9hF7vp8ruDzmsWjnLju3xdYRCUaqoywNZHMt3ozgj3kbsxM8XpeMJknOJ3ne5dZQjhNVEbZiDucFqVUxA5yt1bxeX3Ck06jwtNZSgjNVVL71KEJ31rpPrFe7g4KPq+rjGMY6QX+dClpRKnkTa+VpyilMlbL3Y3p4j6vK4zlWZefmpms4QwxKtHrNWnDMqtW062VewATCRW2cYU3GOnGcRv5lWiVXE6ViGWVNck1rZT7ad4Xd4OkM4K33Dx2E3tpreKFi6AjP7JfwVIerJP7H4wSv3mm8jTve3D8Tr6ng4qPPYwOHNRP/GGV3KMZgbTpFIYy0cNzDrCczpRVmIFQOnCcLQqWrsMKuQMYzzBxsS8wkAQvzjvOUlpSUWEeStGOs7qr6fpyl+ETBon7vH5jILO9PPcEC2mmUlg6iHb4kay39KItdwSf0kd8SeM4DzLfwPlnmE0LlVIYDmIIZo1WqLKu3FWJV/B5HaI3Kwy2kcIs7qC2yqy0oDxrSNUwpSl3LaYp+Lx205d1JrSTzlwqcZf8tABNuInVXJI3pCd3fWYo+Ly20Y8fTGornfmEKlVGaMCdLOaitBktuZuQwG3iVjbQnx9NbC+DJQTRUrzfADfTgsXSWVd15I5mOrXErayhL3tNb3Ul52gv3neA6sSQnMsfbzoacseq5DZcTm+OCrSbyXr200UliLMyXUiWjE2XH0QcCQqLFvPoJeZ0yGQy/ZT2fN3IYqLkmpe+ujV8XjCLQfniVMxlB7uIVhgJlKYHO9gt07is3E/xgYJLcSpDFLIX/sR3tFLZj1qK+/mVTRJNS8o9grEKHxaf8LhSONBBkmmpkicxkK6cYqP5DcvJPYpXJGckm//wrGLs1y+spLnKZgToRDprzG5URu4APuBphWC/13hVZ/HxGidZRH2l5CExVDS08u8ECbmDmcggBbFHMLrAcEM5zjKP+iqr6X40pbbXfj2nmC93BJ/RW3wq0niBty1KIJ/CbOpTV8XWbdRngXl5082WuwpTFHIbXmA471u4I+MqXxHJnSqx6fW5kxVmvfWbK3dNZij4vM4wzOOgJLPJIJHSkgsi13ErLVlhzrqCmXLXJUHBf3SaR70KSjKfZUC0iqWqtDZnNd08uZswXWFz3QkGM0fcirus4jz3iEfdAVQmhu0cNNqMWXLHME3hafUIA1ggbsUT1rGXe1UEr0B7dhtdXDVH7limKoTyHaQ3q8SteMp2NhGnsr+sLB3Zyy4jTZghdxxTKS8+2D30tEvKizz8j/V0VNl9EkwXjrLN+waMyu2n5PPaTm/tEHwP2E8SMSruk0C6ctH7opTG5PZjGOMVfF7f08fmlXWPsJi2KjUL/WgPJHkXm25Ebj+e522Fx5QkegsEJZnNbyygBZEqtloTTJI3seney+3gDV5TGNoSHuKwgh3jnGYR9RRi8gBaUNWbopTeyh3A+/xdYVjfMMRueUVdcJbF1FCqrNCQO0j0VHDv5C7NRAYrDCmBx2QjM03nIkuI5A4VW7VpxgLPNiN4I3c4kxR8XhDP45xVsGMuqSyhHE1VbN1ES1Zxyv0TPJe7MtO5V3wgGXysFpRkNuksIpMolVDlasSyjJPuHu6p3DX4nBjxQVxlHE/5Yjn0bDJZSSqtVNbaIohjlbvPN57JXZcEmosPIIO3eF7cijTJnCNKJbVPKPezw72ilJ7I3VjF55XBSJUXPHk2cIhoghUslaELR9xZXHVf7mimUEe841d4jjHiVrTYzlZiVQQvTReOFx6b7q7cscRTQ7zT6QxjvLgVTfayjk4qu08cdORyYTvb3ZO7FxMV9nmlMIh4hYnR5RCraamymu4gmnIscXlIoXL7MYgJCqmnzvIwMxUmRZ9jLKQ1lRUsOWhOJAsLdp8UJrc/wxRyG8JJHrZRUJLZnGY2MSruEz8aU6Pg1XTXcgcwnH8r+LyO8ZDNgpLM5iKzaai0+6QhdVjtfJOkK7mDeIXXFbq3j/6GMyXZn8skcqNCwhKAujRmpbM02gXLXYp3GK7QtZ/oy3qVSbCaVBKpTCMVWzW5mzX502gXJHcIHzNEoVtb6GPjoCSzyWChWi6nakSzKW/6EudyRyj5vNbTz1hkpc+RwXIu0VbFVkU6sjV3Gm1ncldiOl0UurOGfuxTGbidyGAtv9BZZX9ZWe5j8/WBX/nlvpEvVLbCSGVKsj+Z/MAh2quUwihNHHvYnfMmnlfuusxUyG0IifR330tbBNnCHqIJUbAUSDe25Xxk5nbBV+JLlSfHBPrbr5S5MjPpwyEVSwF/ZHbNLXc16imYj2eIdDJIn2ApfZQCqq/55HLLfc6TuCcv+YjHNXL7+gRr6cVWBTsFyH2Z34QNj2E4lxUG6CtsIo4kcSsFyi17db/GyyVi52EvceK1f4Nz/B56cl9lBG+Yl1SmCHGCLswTtVA6J0gyt9wpYnJf5lne8uHYUlku8oBoYEewc7kzhOQ+xzO8Izgc3+cSDzNOrPVSOUs6eSOhJeQ+wzCmiQ2l6PAUKTwr0nIBN3MJuU/zSInYbvIcL4rUFAty/qiG6ZWlT/AQXwoMoKgyWsTtXODVfdrUlLKH6SP8zFn0mEQP099fAgu+us0rbnSAniwXnZqiyVf0MNmj4OKz2yy5dxPHBvGpKZokcp+pzmFHjs5SV/dWesqUVygmJBNrPEfiNYSv7o30MpL9qwRgG7GmzaF/TuxMXrlTTPBWraGXVKWcYsVOupu0mh5U0NVt/FVsCX1NvA0Vb/bSh0QT2nEUdHVjsPja1zzIEQsmpqhynIeZZbiVgIIe1TCU6Wg6A8Vq9RVXfucRJhhsw19C7kkM9cFMSfbnHE8xxuDiaoE385NepVfNYAJDS4KShEjjef5pqKqSi6vb84D3DN7lMW9ydJbgNiN5ycBLcram+bcVBBPCYU5ynnQC3Ax9f50RVs9GMWAtR7nHy1xOn2at0vnl0zOMMzgoTwXKZ/+3AhX5U/ZfZxv7X2S01TNRbOjKdK8yvdydtcs2v9x+Tj67gyhLuey/EURSJftPDTJ5tiRORZWW3EUdalKVykS4nWrhL1lJevy82qgURAghBBMKKnHSJeSmNKGEEEwpAnHgT23qcAs1qER5bnB6Rrbc3qVxTCPN9ECIEtwnJU+22PUEUIogAnDgwI9g6lCPW6lOFSIIJTjnjv3/96EzenoKL1YAAAAASUVORK5CYII=" />
+    </svg>
+
+
+    <div class="main">
+        <div class="image">
+            <img src="{% static 'assests/profilepic.jpg' %}" alt="profilepic">
+
+        </div>
+        <div id="info">
+            <div id="viewMore"><img src="{% static 'assests/View More.png' %}" width="70%" /></div>
+            <div id="name">ANUPRAVA BISWAS</div>
+            <div id="status">ENGINEER | FULL-STACK DEVELOPER | ML ASPIRANT</div>
+            <div id="social">
+                <a href="https://www.facebook.com/subham.biswas.779" class="fa fa-facebook"></a>
+                <a href="https://www.linkedin.com/in/anuprava-biswas-04b464126" class="fa fa-linkedin"></a>
+                <!--<a href="#" class="fa fa-dribbble"></a>
+                <a href="#" class="fa fa-youtube"></a>-->
+                <a href="https://www.instagram.com/anupravabiswas/" class="fa fa-instagram"></a>
+                <!--<a href="#" class="fa fa-pinterest"></a>-->
+            </div>
+        </div>
+
+        <div id="aboutMe">
+            <h2>ABOUT ME</h2>
+            <p>Hi!! <br>
+                I’m Anuprava Biswas, by profession an Electronics and telecommunication engineer. Data and technology,
+                both have intrigued my curiosity in the same manner. In today’s
+                world where everything is driven by data, harnessing its' power is something which I love to venture.
+            </p>
+            <div id="close"><img src="{% static 'assests/Close.png' %}" width="65%" /></div>
+        </div>
+
+
+    </div>
+
+    <a href="/skills.html"><button class="btn">
+            <div id="next">
+                </id>Next <span style='font-size:30px;'>&#8620;</span>
+            </div>
+        </button>
+    </a>
+    <a href="/"><button class="btn1">
+            <div id="prev">
+                </id><span style='font-size:30px;'>&#8619;</span>Prev
+            </div>
+        </button>
+    </a>
+
+
+</body>
+
+
+
+
+</html>

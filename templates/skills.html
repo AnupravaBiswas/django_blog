@@ -1,0 +1,142 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ANUPRAVA PORFOLIO</title>
+    <link rel="shortcut icon" type="image/jpg" href="{% static 'assests/Capture.JPG' %}">
+    <link rel="stylesheet" href="{% static 'css/skills.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts/nakki_ldr.ttf' %}">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Cute+Font&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css"
+        integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.menu-toggle').click(function () {
+                $('.menu-toggle').toggleClass('active');
+                $('nav').toggleClass('active');
+            })
+        })
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+
+    <header>
+
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            <div>
+                <svg height="100" width="50">
+                    <circle cx="20" cy="20" r="18" stroke="white" stroke-width="2" fill="transparent" />
+                    Sorry, your browser does not support inline SVG.
+                </svg>
+            </div>
+        </div>
+
+        <nav>
+
+            <ul class="menu">
+
+                <li><a href="/">HOME</a></li>
+                <li><a href="/about.html">ABOUT</a></li>
+                <li><a href="/skills.html">SKILLS</a></li>
+                <!--<li><a href="gallery.htm">GALLERY</a></li>-->
+                <!-- <li><a href="source_code.htm">SOURCE_CODE</a></li> -->
+                <li><a href="/blog.html">BLOG</a></li>
+                <li><a href="/contact.htm">CONTACT</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    
+        
+
+    <section id="home">
+        <div class="container">
+            <div class="A"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                    width="1.361in" height="0.75in">
+                    <image x="0px" y="0px" width="55px" height="60px"
+                        xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGIAAAA2BAMAAADOlFHcAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAMFBMVEUAAAD////l5eHl5eHl5eHl5eHl5eHl5eHl5eHl5eHl5eHl5eHl5eHl5eHl5eH///8WYyZwAAAADnRSTlMAACBAMPBwYFCg0BDAsPsy2d0AAAABYktHRAH/Ai3eAAAAB3RJTUUH4wgVFDESJXhStgAAAY9JREFUSMft1bFOAzEMBuAIkCpUFr8BEi+AOMQAC6jiDRiYWNgRG1s39j5BF0akqoiNiSfgEdgAXVXyDATnLs7ZPl8mJjJU517+fmrsa50Ta6OitSvuggy4c0/roiSxdZUlPk4LEjmhIGATCgIDhERggJAIDBECAZX4bLpxoyCgErdNNVIQ0IivVE8lAhahImASGgImoSFgEwqCiXa874nYDOU+IZc0/CC6Fol5uKoJyboJjg8GEtt4OSOERgb6iR4EDEJHwCB0BCxCRc4souebTOJJH4fiocJOjVNZVUvsbCrDOmxbuRPee6XO9pfw14lsBkfdGZ72JLp7WF5PdDYxghKTeGCY8Nd4gHjnDl+xPvJtAje/eb9mAzxLH07dj08Vbm4See/rlKDuxye3k9AQTnQTGsIJlpCIIFhCIoLgCY5IgifcHv3HnoTymcoDpyeG139iVZxYNIlsvO3129OYqAsT85QoRHBs1u7dFyM4md/uxZcicTIf3XhRiiCxenLFSENA/CmP422vOPxL+AGDTkTo9Pcb9AAAAABJRU5ErkJggg==" />
+                </svg>
+            </div>
+            <div class="skills">Skills</div>
+            <div class="text">
+                <div class="text1">
+                    What My Programming,</div>
+                <div class="texta1">    
+                    Skills Included?
+                </div>
+                <div class="text2">
+                    I develop simple, intuitive and responsive user interface that helps users</div>
+
+                <div class="texta2">
+                    get things done with less effort and time with those technologies.
+                </div>
+            </div>
+            <div class="ic">
+                <div class="html1">
+                    <img src="{% static 'assests/iconfinder_HTML_Logo_65687.png' %}" alt="html_logo" width="45px" height="45px">
+                </div>
+                <div class="css">
+                    <img src="{% static 'assests/iconfinder_badge-css-3_317756.png' %}" alt="CSS_logo"width="45px" height="45px">
+                </div>
+                <div class="js">
+                    <img src="{% static 'assests/iconfinder_code-programming-javascript-software-develop-command-language_652581.png' %}" alt="JS_logo"width="45px" height="45px">
+                </div>
+                <div class="py">
+                    <img src="{% static 'assests/iconfinder_267_Python_4518857.png' %}" alt="python_logo" width="45px" height="45px">
+                </div>
+                <div class="mdb">
+                    <img src="data:image/png;base64,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" alt="MDB"width="45px" height="45px">
+                </div>
+                <div class="django">
+                    <img src="{% static 'assests/django.png' %}" alt="dj_logo" width="45px" height="45px">
+                </div>
+                <div class="mysql">
+                    <img src="https://alexdunndev.files.wordpress.com/2017/02/xamagonsqlite.png?w=609" alt="mysql_logo" width="65px" height="65px">
+                </div>
+                <div class="bootstrap">
+                    <img src="{% static 'assests/bootstrap.jpg' %}" alt="bootstrap" width="45px" height="45px">
+                </div>
+                <div class="heroku">
+                    <img src="data:image/png;base64,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" alt="bootstrap" width="45px" height="45px">
+                </div>
+            </div>
+                
+            
+    </section>
+    <a href="/about.html"><button class="btn1">
+        <div id="prev">
+            </id><span style='font-size:30px;'>&#8619;</span>Prev
+        </div>
+    </button>
+</a>
+<a href="/blog.html"><button class="btn2">
+        <div id="next">
+            </id>Next <span style='font-size:30px;'>&#8620;</span>
+        </div>
+    </button>
+</a>
+
+    </body>
+
+</html>

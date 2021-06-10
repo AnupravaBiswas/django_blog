@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css?family=Varela+Round");
+@import url("../css/menu.css");
+@import url("../css/mobite_sytle.css");
+
+
+.menu li a {
+    color: bisque;
+}
+
+.menu li:hover a {
+    color: bisque;
+}
+
+.menu-toggle {
+    background-color: antiquewhite;
+}
+
+
+/** home page**/
+
+@font-face {
+    font-family: "myFirstFont";
+    src: url(fonts/nakki_ldr.ttf) format('truetype');
+}
+
+
+.no {
+    font-size: 1em;
+
+    right: 30%;
+    font-stretch: 40%;
+
+    top: 50%;
+    position: fixed;
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* background: url(../assests/bg.jpg) center/cover no-repeat;
+    background-clip: text; */
+    /* -webkit-background-clip: text; */
+
+    font-weight: 1100;
+}
+
+.design {
+    position: fixed;
+    color: white;
+    margin-top: 18%;
+    right: 30%;
+    font-weight: 1000px;
+    font-size: 4vw;
+}
+
+@media screen and (max-width: 900px) {
+    div.design {
+
+        top: 20%;
+        left: 35%;
+    }
+}
+
+
+@media screen and (max-width: 620px) {
+    div.design {
+        font-size: 30px;
+        top: 30%;
+        left: 30%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    div.design {
+        font-size: 30px;
+        top: 30%;
+        left: 15%;
+    }
+}
+
+
+.signature {
+    left: 2%;
+    top: 2%;
+    position: fixed;
+    font-size: 1.5rem;
+    color: white;
+    font-family: 'Cute Font', cursive;
+}
+
+.circle {
+    top: 30%;
+    position: fixed;
+    left: 15%;
+
+}
+
+
+
+/* canvas {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+.A {
+
+    position: absolute;
+    background: transparent;
+    box-shadow: none;
+    top: 25%;
+    left: 47%;
+    font-family: "myFirstFont";
+
+
+    text-shadow:
+
+        0 0 10px rgb(248, 35, 35);
+
+
+}
+
+.hr1 {
+    color: white;
+    width: 3em;
+}
+
+@media screen and (max-width: 600px) {
+    div.A {
+        left: 35%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.btn1 {
+    border: 1px solid rgb(250, 5, 5);
+    background: none;
+    padding: 2px 40px;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+    right: 2%;
+    margin-top: 85vh;
+    background-color: rgba(255, 0, 0, 0);
+    position: absolute;
+    color: white;
+
+}

@@ -1,0 +1,506 @@
+@import url("../css/menu.css");
+@import url("../css/mobite_sytle.css");
+
+body,
+html {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 0;
+    color: black;
+    font-size: 10pt;
+    font-family: "Trebuchet MS", sans-serif;
+    background-color: #f7e3d2;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 750px) {
+
+
+    nav :not(:active) {
+        right: -40px;
+    }
+
+
+}
+
+
+.hlfshape {
+
+    width: 50%;
+    height: 100vh;
+    position: fixed;
+
+    overflow: hidden;
+
+    background: linear-gradient(to right, rgba(36, 31, 31, 1) 0%, rgba(36, 31, 31, 1) 32%, rgb(49, 47, 45) 100%);
+    color: #fff;
+    text-align: center;
+}
+
+
+
+.blue_bg {
+    position: absolute;
+    width: 40%;
+    left: 10%;
+    top: 30%;
+    height: 5%;
+    background: linear-gradient(to right, rgb(206, 94, 42), rgb(189, 70, 15));
+    align-content: center;
+
+
+}
+
+.first {
+    top: 8%;
+}
+
+.second {
+    top: 12%;
+}
+
+.third {
+    top: 16%;
+}
+
+.welcome {
+    z-index: 1;
+    color: #FFF6DA;
+    font-size: 3em;
+    margin-top: -20vh;
+    text-align: center;
+    padding: 30vh 0 1em;
+}
+
+.A {
+
+    background-color: transparent;
+}
+
+
+.about {
+    position: fixed;
+    transform: rotate(-90deg);
+    transform-origin: top right;
+    right: 7%;
+    margin-top: 25vh;
+    color: #ada1a1cc;
+    float: right;
+    font-size: 80px;
+    text-align: center;
+}
+
+
+
+.svg1 {
+
+    position: fixed;
+    left: 52%;
+    top: 90%;
+    overflow: hidden;
+    opacity: .7;
+
+}
+
+.svg2 {
+    transform: rotate(30deg);
+    position: fixed;
+    left: 85%;
+    top: 30%;
+    overflow: hidden;
+    opacity: .7;
+}
+
+.svg3 {
+
+    position: fixed;
+    left: 60%;
+    top: 14%;
+    overflow: hidden;
+    opacity: .7;
+}
+
+
+
+.svg1,
+
+.svg3 {
+    -webkit-animation: svgall 4s infinite;
+    -moz-animation: svgall 4s infinite;
+    -ms-animation: svgall 4s infinite;
+    animation: svgall 4s infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -ms-animation-timing-function: linear;
+    animation-timing-function: linear
+}
+
+@keyframes svgall {
+    0% {
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg)
+    }
+
+    100% {
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg)
+    }
+}
+
+/**************   profile card ************/
+
+
+.main {
+    height: 400px;
+    width: 250px;
+    background-color: aliceblue;
+    border-radius: 5px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.image img {
+    height: 80%;
+    width: 100%;
+}
+
+#info {
+    height: 120px;
+    width: 100%;
+    background-color: #81B0F8;
+    position: absolute;
+    top: 280px;
+    z-index: 1;
+}
+
+#info:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -50px;
+    border-bottom: 50px solid #81B0F8;
+    border-left: 250px solid transparent;
+}
+
+#info:after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -60px;
+    border-bottom: 60px solid #81CFFF;
+    border-left: 250px solid transparent;
+    z-index: -1;
+}
+
+#viewMore,
+#close {
+    height: 30px;
+    width: 30px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, .5);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    cursor: pointer;
+}
+
+#close {
+    top: 325px;
+}
+
+#viewMore img,
+#close img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+}
+
+#name {
+    font-family: arial;
+    font-weight: bold;
+    font-size: 13px;
+    color: #222222;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 30px;
+}
+
+#status {
+    font-family: arial;
+    font-size: 10px;
+    color: white;
+    text-align: center;
+}
+
+#social {
+    display: flex;
+    position: absolute;
+    margin-top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.fa {
+    padding: 10px;
+    font-size: 20px;
+    width: 10px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa-dribbble {
+    background: #ea4c89;
+    color: white;
+}
+
+.fa-pinterest {
+    background: #cb2027;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .about {
+        transform: rotate(-90deg);
+    }
+
+    .main {
+        top: 500px;
+        left: 150px;
+    }
+}
+
+
+#aboutMe {
+    height: 300px;
+    width: 100%;
+    background-color: #81B0F8;
+    position: absolute;
+    top: -360px;
+}
+
+#aboutMe:before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 300px;
+    border-top: 50px solid #81B0F8;
+    border-right: 250px solid transparent;
+}
+
+#aboutMe:after {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 300px;
+    border-top: 60px solid #81CFFF;
+    border-right: 250px solid transparent;
+    z-index: -1;
+}
+
+#aboutMe h2 {
+    font-family: arial;
+    font-size: 14px;
+    color: white;
+    margin: 10px;
+}
+
+#aboutMe p {
+    font-family: arial;
+    font-size: 15px;
+    color: white;
+    margin: 10px;
+    text-align: justify;
+}
+
+
+/** accordion style **/
+
+.accord {
+    max-width: 650px;
+    top: -500px;
+
+
+    padding: 30px;
+    z-index: -10;
+}
+
+.accord .card {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.accord .card::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    height: 100%;
+    width: 1px;
+    background-color: rgb(248, 203, 66);
+
+}
+
+
+
+.accord .card-header {
+    position: relative;
+    padding-left: 45px;
+    cursor: pointer;
+}
+
+.accord .card-header h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #fff6da;
+    transition: color .5s ease;
+    font-family: Pacifico;
+    font-weight: 100;
+    text-align: left;
+
+}
+
+
+
+
+
+
+
+
+
+.accord .card-body {
+    padding-left: 45px;
+}
+
+.accord .card .card-body {
+    display: none;
+}
+
+/*open one card by default*/
+.accord .card:nth-child(1) .card-body {
+    display: block;
+}
+
+.accord .card-body p {
+    color: #7c7676;
+    font-size: 15px;
+    line-height: 24px;
+    margin: 0px;
+    padding: 5px 0;
+    text-align: left;
+
+}
+
+
+.btn {
+    border: 1px solid rgb(250, 5, 5);
+    background: none;
+    padding: 2px 40px;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+    right: 2%;
+    top: 90%;
+    background-color: rgba(255, 0, 0, 0);
+    position: absolute;
+    color: black;
+
+}
+
+.btn1 {
+    border: 1px solid rgb(250, 5, 5);
+    background: none;
+    padding: 2px 40px;
+    font-size: 20px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+    left: 2%;
+    top: 90%;
+    background-color: rgba(255, 0, 0, 0);
+    position: absolute;
+    color: white;
+
+}
+
+@media screen and (max-width: 750px) {
+
+    .btn,
+    .btn1,
+    .welcome,
+    .A {
+        visibility: hidden;
+    }
+
+    .about {
+        position: fixed;
+        top: -15%;
+        font-size: 3rem;
+        transform: rotate(1800deg);
+        transform-origin: bottom right;
+        left: -45%;
+        z-index: 10;
+    }
+
+    .main {
+        top: 55%;
+        left: 50%;
+    }
+
+    .accord {
+        visibility: hidden;
+    }
+}
