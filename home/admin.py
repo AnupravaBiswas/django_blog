@@ -2,6 +2,7 @@ from django.contrib import admin
 
 # Register your models here.
 from .models import BlogModel,Profile
+from .models import CommentModel
 
 
 admin.site.register(Profile)
@@ -25,3 +26,7 @@ class PostAdmin(admin.ModelAdmin):
     ordering = ('status', 'created_at')
 
 
+class CommentAdmin(admin.ModelAdmin):
+    list_display = ('your_name', 'approved')
+
+admin.site.register(CommentModel, CommentAdmin)

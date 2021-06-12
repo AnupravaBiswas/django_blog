@@ -10,7 +10,7 @@ urlpatterns = [
     path('skills.html', views.skills, name='skills'),
     path('blog.html', views.blog, name='blog'),
     path('contact.htm', views.contact, name='contact'),
-    path('blog-detail/<slug>' , blog_detail , name="blog_detail"),
+    path('blog-detail/<slug>' , views.blog_detail , name="blog_detail"),
     path(r'^results/$', views.search, name='search'),
-  
+    # path('comment', views.add_comment, name='add_comment'),
 ]

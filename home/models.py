@@ -32,6 +32,7 @@
 
 from django.db import models
 from django.contrib.auth.models import User
+from django.db.models.fields import CharField
 from froala_editor.fields import FroalaField
 from .helpers import *
 from django.urls import reverse
@@ -77,8 +78,19 @@ class BlogModel(models.Model):
     objects = models.Manager() # The default manager.
     published = PublishedManager() # Our custom manager.
     
-    # def get_absolute_url(self):
-    #     return reverse('blog:blog_detail',args=[self.slug])
+    def get_absolute_url(self):
+        return reverse('blog_detail',args=[self.slug])
 
- 
+class CommentModel(models.Model):
+    your_name = models.CharField(max_length=20)
+    comment_text = models.TextField()
+    blog = models.ForeignKey('BlogModel', on_delete=models.CASCADE, related_name='comments')
+    created = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=True)
 
+    def approved(self):
+        self.approved = True
+        self.save()
+     
+    def __str__(self):
+        return f"Comment by Name: {self.your_name}"
